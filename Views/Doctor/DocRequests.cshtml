@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Doctor Requests Lab";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Requests Lab</title>
+</head>
+<body>
+    <h1>Doctor Requests Lab</h1>
+
+    @using (Html.BeginForm("RequestLabtests", "DoctorController", FormMethod.Post))
+    {
+        <label for="DoctorId">Doctor ID:</label>
+        <input type="text" id="DoctorId" name="DoctorId" />
+
+        <label for="Patient_SSN">Patient SSN:</label>
+        <input type="text" id="Patient_SSN" name="Patient.SSN" />
+
+        <label for="Labtest_LabtestID">Lab Test ID:</label>
+        <input type="text" id="Labtest_LabtestID" name="Labtest.LabtestID" />
+
+        <input type="submit" value="Submit" />
+    }
+</body>
+</html>

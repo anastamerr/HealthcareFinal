@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Add mobile phone";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Phone numbers</title>
+</head>
+<body>
+    <h1>Add mobile</h1>
+
+    @using (Html.BeginForm("AddPhone", "DoctorController", FormMethod.Post))
+    {
+        <label for="DoctorId">Doctor ID:</label>
+        <input type="text" id="DoctorId" name="DoctorId" />
+
+        <label for="mobile">Mobile number:</label>
+        <input type="text" id="mobileNumber" name="mobileNumber" />
+
+        
+
+        <input type="submit" value="Submit" />
+    }
+</body>
+</html>

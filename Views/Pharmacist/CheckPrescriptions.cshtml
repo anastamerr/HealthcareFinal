@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Check Prescriptions";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Prescriptions</title>
+</head>
+<body>
+    <h1>Check Prescriptions</h1>
+
+    @using (Html.BeginForm("CheckPres", "PharmacistController", FormMethod.Post))
+    {
+        <label for="dateofpres">Date of Prescription:</label>
+        <input type="text" id="dateofpres" name="dateofpres" />
+
+        <label for="SSN">Patient SSN:</label>
+        <input type="text" id="SSN" name="SSN" />
+
+        <label for="Doctor_id">Doctor ID:</label>
+        <input type="text" id="Doctor_id" name="Doctor_id" />
+
+        <input type="submit" value="Submit" />
+    }
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@model List<HealthcareFinal.Models.ChecksHospitalDocs>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChecksHospital View</title>
+</head>
+<body>
+    <h1>ChecksHospital Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Hospital Name</th>
+                <th>Doctor id</th>
+                
+                <!-- Add other table headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.hospital_name</td>
+                    <td>@item.Doctor_id</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

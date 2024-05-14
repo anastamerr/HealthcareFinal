@@ -1,0 +1,39 @@
+﻿@model List<HealthcareFinal.Models.Patient>
+
+<table>
+    <tr>
+        <th>User Email</th>
+        <th>Password</th>
+        <th>SSN</th>
+        <th>Electronic Health Records</th>
+        <th>Emergency Contact Information</th>
+        <th>Allergies</th>
+        <th>Chronic Diseases</th>
+        <th>Vaccines</th>
+        <th>Prescribed Drugs</th>
+        <th>Results</th>
+        <th>Hospital Name</th>
+        <th>Company ID</th>
+        <th>Nurse ID</th>
+        <!-- Other table headers... -->
+    </tr>
+    @foreach (var patient in Model)
+    {
+        <tr>
+            <td>@patient.UserEmail</td>
+            <td>@patient.Password</td>
+            <td>@patient.SSN</td>
+            <td>@patient.ElectronicHealthRecords</td>
+            <td>@patient.EmergencyContactInformation</td>
+            <td>@patient.Allergies</td>
+            <td>@patient.ChronicDiseases</td>
+            <td>@patient.Vaccines</td>
+            <td>@patient.PrescribedDrugs</td>
+            <td>@patient.Results</td>
+            <td>@patient.HospitalName</td>
+            <td>@patient.CompanyId</td>
+            <td>@patient.NurseId</td>
+            <!-- Other table data... -->
+        </tr>
+    }
+</table>

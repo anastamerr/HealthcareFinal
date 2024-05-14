@@ -1,0 +1,53 @@
+﻿@model List<HealthcareFinal.Models.ChecksHospitalDocs>
+
+@{
+    ViewBag.Title = "ChecksHospital";
+}
+
+<h2>ChecksHospital</h2>
+
+@using (Html.BeginForm("ChecksHospitalfunc", "Patient", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Enter Doctor ID</h4>
+        <hr />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.Label("DoctorId", "Doctor ID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("DoctorId", null, new { @class = "form-control" })
+                @Html.ValidationMessage("DoctorId", "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Check Hospitals" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model != null && Model.Count > 0)
+{
+    <h3>Hospitals</h3>
+    <table class="table">
+        <tr>
+            <th>Hospital Name</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.hospital_name</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>No hospitals found for the entered Doctor ID.</p>
+}

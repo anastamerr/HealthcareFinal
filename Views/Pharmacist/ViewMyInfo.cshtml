@@ -1,0 +1,32 @@
+﻿  @model List<HealthcareFinal.Models.Pharmacist>
+<table>
+    @foreach (var pharmacist in Model)
+    {
+        <tr>
+            <th>User Email</th>
+            <td>@pharmacist.UserEmail</td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>@pharmacist.Password</td>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <td>@pharmacist.identificationCode</td>
+        </tr>
+        <tr>
+            <th>Middle Name</th>
+            <td>@pharmacist.name</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>@pharmacist.pharmacy_name</td>
+        </tr>
+        <tr>
+            <th>Nurse ID</th>
+            <td>@pharmacist.first_working_day</td>
+        </tr>
+        
+        <!-- Other properties... -->
+    }
+</table>

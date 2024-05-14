@@ -1,0 +1,1 @@
+﻿INSERT INTO Patient (UserEmail,Password,SSN)VALUES('anas','1313',14);

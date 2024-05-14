@@ -1,0 +1,33 @@
+﻿@model List<HealthcareFinal.Models.CheckPres>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prescriptions</title>
+</head>
+<body>
+    <h1>Prescriptions</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date of Prescription</th>
+                <th>Patient SSN</th>
+                <th>Doctor ID</th>
+                <!-- Add more columns if needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.dateofpres</td>
+                    <td>@item.SSN</td>
+                    <td>@item.Doctor_id</td>
+                    <!-- Add more columns if needed -->
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

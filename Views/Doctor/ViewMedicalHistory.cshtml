@@ -1,0 +1,32 @@
+﻿@model HealthcareFinal.Models.Patient
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Patient Medical History</title>
+</head>
+<body>
+    <h1>View Patient Medical History</h1>
+
+    <form method="get" action="@Url.Action("ViewMedicalHistory", "DoctorController")">
+        <label for="ssn">Enter Patient SSN:</label>
+        <input type="text" id="ssn" name="ssn" />
+        <input type="submit" value="Submit" />
+    </form>
+
+    @if (Model != null)
+    {
+        <table>
+            <tr>
+                <th>Allergies</th>
+                <td>@Model.Allergies</td>
+            </tr>
+            <tr>
+                <th>Chronic Diseases</th>
+                <td>@Model.ChronicDiseases</td>
+            </tr>
+            <!-- Add other properties as needed -->
+        </table>
+    }
+</body>
+</html>

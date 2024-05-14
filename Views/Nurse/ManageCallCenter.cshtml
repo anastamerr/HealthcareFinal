@@ -1,0 +1,33 @@
+﻿@model List<HealthcareFinal.Models.call_center>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChecksHospital View</title>
+</head>
+<body>
+    <h1>ChecksHospital Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>EMS id</th>
+            
+
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.EMS_id</td>
+                  
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
